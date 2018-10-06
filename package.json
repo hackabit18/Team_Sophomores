@@ -1,0 +1,16 @@
+{
+  "name": "project-elon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^3.0.2",
+    "electron-packager": "^12.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Aman , Nishant , Pratham , Nikhil",
+  "license": "ISC"
+}
