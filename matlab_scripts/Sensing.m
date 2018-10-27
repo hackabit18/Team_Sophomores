@@ -24,7 +24,7 @@ bi_thresh = bwmorph(bi_thresh, 'dilate');
 bi_thresh = imfill(bi_thresh, 'holes');
 bi_thresh = imcomplement(bi_thresh);
 %subplot(2,2,1),imshow(bi_thresh);
-%subplot(1,2,1),imshow(bi_thresh);
+subplot(1,2,1),imshow(bi_thresh);
 
 %calculate area of water
 stats = regionprops(bi_thresh);
@@ -50,7 +50,7 @@ I = red < RedThU & red > RedThL & green < GreenThU & green > GreenThL & blue < B
 I = bwmorph(I, 'dilate');
 I = imfill(I, 'holes');
 I = imcomplement(I);
-%subplot(2,2,2),imshow(I);
+%subplot(1,2,2),imshow(I);
 
 %calculate area of water
 areaL = 0;
@@ -60,7 +60,7 @@ for i = 1: length(stats)
         areaL = areaL + stats(i).Area;  
    end   
 end
-%subplot(1,2,2),imshow(I);
+subplot(1,2,2),imshow(I);
 
 %Taking change in water area
 
@@ -71,5 +71,3 @@ alert = 0;
 if(perc > Vth)
     alert = 1;
 end
-
-%post alert result

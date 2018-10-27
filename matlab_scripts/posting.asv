@@ -1,0 +1,24 @@
+%post alert result
+
+url = 'http://localhost:5454/api/latestSatelliteImage';
+options = weboptions('RequestMethod','post', 'MediaType','application/json');
+
+Body.Location= name(1)(1);
+Body.Lattitude= alertlat(1);
+Body.Longitude= alertlng(1);
+Body.TimeStamp= 1600;
+Body.Area= area;
+Body.CriticalFactor= perc;
+Body.Alert = alert;
+response = webwrite(url, Body, options);
+
+Body.Location='Changanacheri';
+Body.Lattitude= 18;
+Body.Longitude= 38;
+Body.TimeStamp= 9.8;
+Body.Area= 9.8;
+Body.CriticalFactor= 9.8;
+Body.Alert = 5;
+response = webwrite(url, Body, options);
+
+data = webread('http://localhost:5454/api/latestSatelliteImage');
