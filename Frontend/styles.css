@@ -1,0 +1,51 @@
+.padding-zero {
+            padding: 0;
+        }
+
+        .w3-bar {
+            font-weight: 400;
+            font-size: 16px;
+            border-bottom: solid 0.25px grey;
+        }
+
+        #Monitor>h2 {
+            border-bottom: solid 2px grey;
+            text-align: center
+        }
+
+        #Monitor button {
+            margin-top: 5px;
+            height: 18px;
+            padding: 2px 8px;
+            border: 1px solid #F3F3F3;
+            box-shadow: 0 0 0 1px #707070;
+            border-radius: 3px;
+            background: -moz-linear-gradient(top, #F2F2F2 0%, #EBEBEB 50%, #DDDDDD 51%, #CFCFCF 100%);
+            font: normal 12px sans-serif;
+            color: black;
+            text-decoration: none;
+        }
+
+        #Monitor button:hover {
+            border: 1px solid #ECF7FD;
+            box-shadow: 0 0 0 1px #3C7FB1;
+            background: -moz-linear-gradient(top, #EAF6FD 0%, #D9F0FC 50%, #BEE6FD 51%, #A7D9F5 100%);
+        }
+
+        #Monitor button:active {
+            padding: 2px 7px 3px 9px;
+            border: 1px solid #73A7C4;
+            border-bottom: 0;
+            box-shadow: 0 0 0 1px #2C628B;
+            background: -moz-linear-gradient(top, #E5F4FC 0%, #C4E5F6 50%, #98D1EF 51%, #68B3DB 100%);
+        }
+
+        /* div {
+            border: solid 1px black;
+        } */
+
+        .console{
+            background: black;
+            color: white;
+            height: -webkit-fill-available;
+        }
