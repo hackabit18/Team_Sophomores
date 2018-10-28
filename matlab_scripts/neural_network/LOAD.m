@@ -1,10 +1,9 @@
-clc;clear;close;
 s=load('train.mat','w1','w5','w0');
 j=struct2cell(s);
 w1 =j{1};
 w5=j{2};
 w0=j{3};
-z=loadimage('images\zimg22.tif');
+z=loadimage('../floodimage.tif');
 labels=loadlabels('out.xlsx');
 labels(labels==0)=2;
   
@@ -17,5 +16,11 @@ labels(labels==0)=2;
         y7=w0*y6;
         y=Softmax(y7);
          [~,i]=max(y);
+         if i == 1
+             i = 0;
+         end
+         if i == 2
+             i = 1;
+         end
          fprintf('got %f\n',i);
         
